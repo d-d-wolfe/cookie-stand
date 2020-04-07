@@ -18,18 +18,19 @@ seattleStore.calcCustPerHour = function (){
 seattleStore.calcCustPerHour();
 console.log(seattleStore.custPerHour);
 
-var tokyoStore = {
-  tokMinCust : 3,
-  tokMaxCust : 24,
-  tokAvgCookieSale : 1.2,
-  tokCustPerHour : [],
-  tokHoursOpen : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
-}
+// var tokyoStore = {
+//   tokMinCust : 3,
+//   tokMaxCust : 24,
+//   tokAvgCookieSale : 1.2,
+//   tokCustPerHour : [],
+//   tokHoursOpen : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
+// }
 
-tokyoStore.calcTokCustPerHour = function() {
-  for (var i = 0; this.tokHoursOpen.length; i++) {
-    var tokRandomCust = Math.round(Math.random() * (this.tokMaxCust - this.tokMinCust + 1) + this.tokMinCust);
-    this.tokCustPerHour.push(tokRandomCust);
-  }
-}
-tokyoStore.calcTokCustPerHour();
+// tokyoStore.calcTokCustPerHour = function() {
+//   for (var i = 0; this.tokHoursOpen.length; i++) {
+//     var tokRandomCust = Math.round(Math.random() * (this.tokMaxCust - this.tokMinCust + 1) + this.tokMinCust);
+//     this.tokCustPerHour.push(tokRandomCust);
+//   }
+// }
+// tokyoStore.calcTokCustPerHour();
+// console.log(tokyoStore.tokCustPerHour);
