@@ -18,17 +18,22 @@ seattleStore.calcCustPerHour = function (){
  
   for (var i = 0; i < this.hoursOpen.length; i++) {
    var randomCustomer = Math.round(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
-  this.custPerHour.push(randomCustomer);
+   this.custPerHour.push(randomCustomer);
   }
 //create a function to calculate the cookies needed per hour, based on customers per hour and average cookie sales per customer.
+//seattleStore.calcCookiesPerHour = function(){
+
   for (var i = 0; i < this.custPerHour.length; i++) {
     var calcCookiesPerHour = Math.round(this.custPerHour[i] * this.avgCookieSale)
-    console.log(calcCookiesPerHour)
+    this.cookiesPerHour.push(calcCookiesPerHour)
+    //console.log(calcCookiesPerHour)
   }
 
 }
 seattleStore.calcCustPerHour();
 console.log(seattleStore.custPerHour);
+console.log(seattleStore.cookiesPerHour);
+
 
 
 // create a table to display the hours open and the random customers per hour, and how many cookies are needed per hour
