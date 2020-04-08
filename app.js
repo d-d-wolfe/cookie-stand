@@ -40,9 +40,16 @@ console.log(seattleStore.cookiesPerHour);
 seattleStore.renderToPage = function () {
   var targetUlEl = document.getElementById('seattle');
   var newLiEl = document.createElement('li');
+  var custLiEl = document.createElement('li');
   var listText = this.cookiesPerHour;
-  newLiEl.textContent = listText;
-  targetUlEl.appendChild(newLiEl)
+  var custListText = this.custPerHour;
+  
+  newLiEl.textContent = 'Cookies Per hour ' + listText;
+  custLiEl.textContent = 'Customers per hour ' + custListText;
+
+  targetUlEl.appendChild(custLiEl);
+  targetUlEl.appendChild(newLiEl);
+ 
   //console.log(newLiEl)
 }
 seattleStore.renderToPage();
@@ -86,8 +93,15 @@ console.log(tokyoStore.tokCalcCookiesPerHour);
 tokyoStore.renderToPage = function () {
   var targetUlEl = document.getElementById('tokyo');
   var newLiEl = document.createElement('li');
+  var tokCustLiEl = document.createElement('li');
   var listText = this.tokCookiesPerHour;
-  newLiEl.textContent = listText;
-  targetUlEl.appendChild(newLiEl)
+  var tokCustListText = this.tokCustPerHour;
+
+  newLiEl.textContent = 'Cookies per hour ' + listText;
+  tokCustLiEl.textContent = 'Customers per hour ' + tokCustListText;
+
+  targetUlEl.appendChild(tokCustLiEl);
+  targetUlEl.appendChild(newLiEl);
 }
 tokyoStore.renderToPage();
+
