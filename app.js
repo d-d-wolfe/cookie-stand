@@ -55,6 +55,7 @@ var tokyoStore = {
   tokMaxCust : 24,
   tokAvgCookieSale : 1.2,
   tokCustPerHour : [],
+  tokCookiesPerHour : [],
   tokHoursOpen : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
 }
 
@@ -63,8 +64,30 @@ tokyoStore.c = function() {
   for (var i = 0; i < this.tokHoursOpen.length; i++) {
     var tokRandomCust = Math.round(Math.random() * (this.tokMaxCust - this.tokMinCust + 1) + this.tokMinCust);
     this.tokCustPerHour.push(tokRandomCust);
+    
+    }
+}
+
+tokyoStore.tokCalcCookiesPerHour = function() {
+
+  for (var i = 0; i < this.tokCustPerHour.length; i++) {
+    var tokCalcCookiesPerHour = Math.round(this.tokCustPerHour[i] * this.tokAvgCookieSale)
+    this.tokCookiesPerHour.push(tokCalcCookiesPerHour)
+    // console.log(tokCalcCookiesPerHour)
+    
   }
+  
 }
 tokyoStore.c();
-//tokyoStore.calcTokCustPerHour();
-console.log(tokyoStore.tokCustPerHour);
+tokyoStore.tokCalcCookiesPerHour();
+console.log(tokyoStore.c);
+console.log(tokyoStore.tokCalcCookiesPerHour);
+
+tokyoStore.renderToPage = function () {
+  var targetUlEl = document.getElementById('tokyo');
+  var newLiEl = document.createElement('li');
+  var listText = this.tokCookiesPerHour;
+  newLiEl.textContent = listText;
+  targetUlEl.appendChild(newLiEl)
+}
+tokyoStore.renderToPage();
