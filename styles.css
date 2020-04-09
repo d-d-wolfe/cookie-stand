@@ -1,12 +1,24 @@
 
 
+* {
+  outline: 1px dotted red;
+  box-sizing: border-box;
+}
+
 header {
   height: 100px;
   background-color: lightgreen;  
 }
 
+nav {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  
+}
+
 nav img {
   float: left;
   height: 75px;
-
 }
