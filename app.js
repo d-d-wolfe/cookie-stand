@@ -61,11 +61,27 @@ seattleStore.renderToPage = function () {
   var div = document.getElementById('seattle')
   var newUlEl = document.createElement('ul');
   var storeEl = document.createElement('h1')
-  var newLiEl = document.createElement('li');
-  var listText = this.cookiesPerHour[0];
-  var hoursList = this.hoursOpen[0];
   
-  newLiEl.textContent = hoursList + ' ' + listText;
+
+  storeEl.textContent = 'Seattle';
+  div.appendChild(storeEl);
+  for (var i = 0; i < this.hoursOpen.length; i++) {
+    var newLiEl = document.createElement('li');
+ 
+
+  newLiEl.textContent = this.hoursOpen[i] + ': ' + this.cookiesPerHour[i] + ' cookies.';
+  newUlEl.appendChild(newLiEl);
+}
+
+
+
+  div.appendChild(newUlEl);
+
+
+  // var listText = this.cookiesPerHour[0];
+  // var hoursList = this.hoursOpen[0];
+  
+  //newLiEl.textContent = hoursList + ' ' + listText;
  
 
   //targetUlEl.appendChild(newLiEl);
