@@ -1,9 +1,28 @@
 'use strict';
 
-//create an object called seattleStore to hold min and max cust per hour
-//average cookie sales, and hours open
 
 //create object constructors
+
+function Store(minCust, maxCust, avgCookieSale) {
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgCookieSale = avgCookieSale;
+  this.custPerHour = [];
+  this.cookiesPerHour = [];
+  this.dailyTotal = 0;
+  this.hoursOpen = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+  //this.hoursOpen2 = hoursArr --for future use to make the hours dynamic.
+}
+
+
+
+var seattle = new Store(23,65,6.3);
+console.log('Seattle constructor ', seattle)
+
+
+
+//create an object called seattleStore to hold min and max cust per hour
+//average cookie sales, and hours open
 
 var seattleStore = {
   minCust : 23,
