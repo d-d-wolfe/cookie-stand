@@ -1,0 +1,30 @@
+* {
+  outline: 1px dotted red;
+  box-sizing: border-box;
+}
+
+header {
+  height: 100px;
+  background-color: lightgreen;
+}
+
+#mainContent {
+  margin-top: 30px;
+}
+
+#headrow {
+ display: contents; 
+}
+
+form {
+  width: 40%;
+}
+
+input {
+  float: right;
+}
+
+button {
+  float: right;
+  margin-top: 5px;
+}
