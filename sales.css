@@ -1,6 +1,36 @@
 * {
-  outline: 1px dotted red;
   box-sizing: border-box;
+}
+
+nav h1 {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  font-size: 150%;
+  color: midnightblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav a {
+  width: 30%;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 90%;
+  font: bolder;
+  font-size: 150%;
+  font-weight: bolder;
+  font-family: fantasy;
+  color: blue;
+}
+
+nav a:hover {
+  color: blueviolet;
+}
+
+nav img {
+  float: left;
+  margin-left: 15px;
 }
 
 header {
@@ -12,12 +42,23 @@ header {
   margin-top: 30px;
 }
 
+body {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQyEvX9ARGUTvSAn8uRxG7LTBN1vwnJMwmt46RldUkS3CBTywbf&usqp=CAU');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #headrow {
  display: contents; 
+ color: lightsteelblue;
 }
 
 form {
   width: 40%;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSKyzhUh8BMyFHmihzdnFoU2rtonHZsye95Bx7N5keL2eMmcijc&usqp=CAU");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-weight: bolder;
 }
 
 input {
@@ -27,4 +68,52 @@ input {
 button {
   float: right;
   margin-top: 5px;
+  border-radius: 10px;
+  font-size: larger;
+  font-weight: bolder;
+  background-color: aqua;
+}
+
+button:hover {
+  color: red;
+  background-color: beige;
+}
+
+h2 {
+  width: 20%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  color: azure;
+}
+
+table {
+  margin-top: 20px;
+  border-collapse:collapse;
+  border:none;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSKyzhUh8BMyFHmihzdnFoU2rtonHZsye95Bx7N5keL2eMmcijc&usqp=CAU");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+th,td {
+  border:1px solid rgb(13, 14, 13);
+  padding:4px 15px;
+  font-family:Times New Roman;
+  font-size:24px;
+  text-align:left;
+  
+}
+th {
+  background-color:#C8C8C8;
+  cursor:pointer;
+  
+}
+
+td {
+  color: rgb(5, 18, 53);
+}
+
+#chinook {
+  float: right;
 }
