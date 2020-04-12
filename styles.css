@@ -104,7 +104,14 @@ footer a {
   height: 100px;
   font-size: large;
   color: aqua;
+  position: absolute;
+  left: 5%;
+  top: 10%;
   
+}
+
+footer {
+  position: relative;
 }
 
 footer a:hover {
